@@ -1,23 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package learningchess;
-//bvbvccbcvbhjkhkjkhhkhk
-/**
- *
- * @author Pablo
- */
-public class MainMenu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainMenu
-     */
+import Elementos.Tablero;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+public class MainMenu extends javax.swing.JFrame {
+    private static Image fondo = Toolkit.getDefaultToolkit().createImage("mainMenu.jpg");
+    
     public MainMenu() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     /**
@@ -29,25 +24,59 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jbtnPlay = new javax.swing.JButton();
+        jbtnLearning = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(579, 413));
+        setResizable(false);
+        getContentPane().setLayout(null);
+
+        jbtnPlay.setText("Play 1v1");
+        jbtnPlay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnPlayActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbtnPlay);
+        jbtnPlay.setBounds(120, 330, 110, 23);
+
+        jbtnLearning.setText("Learning Center");
+        jbtnLearning.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnLearningActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbtnLearning);
+        jbtnLearning.setBounds(310, 330, 130, 23);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/mainMenu.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 580, 410);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbtnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPlayActionPerformed
+        // TODO add your handling code here:
+        Tablero tablero = new Tablero();
+        tablero.setVisible(true);
+        
+    }//GEN-LAST:event_jbtnPlayActionPerformed
+
+    private void jbtnLearningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLearningActionPerformed
+        // TODO add your handling code here:
+        LearningCenter lerCen = new LearningCenter();
+        lerCen.setVisible(true);
+    }//GEN-LAST:event_jbtnLearningActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jbtnLearning;
+    private javax.swing.JButton jbtnPlay;
     // End of variables declaration//GEN-END:variables
 
     
