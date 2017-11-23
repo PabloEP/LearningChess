@@ -1,7 +1,7 @@
 package Elementos;
 
 public abstract class Azulejo {
-    int posAzulejo;
+    protected final int posAzulejo;
     
     Azulejo(int posAzulejo){
         this.posAzulejo = posAzulejo;
@@ -10,10 +10,11 @@ public abstract class Azulejo {
     public abstract boolean estaOcupada();    
     public abstract Pieza obtenerPieza();    
     
+    //Construtores
     //Para cuando el azulejo está vacio
     public static final class AzulejoVacio extends Azulejo{
         //Crea el azulejo sin pieza
-        AzulejoVacio(int posicion){
+        AzulejoVacio(final int posicion){
             super(posicion);
         }        
         //Retorna que la posicion no está ocupada
@@ -30,9 +31,9 @@ public abstract class Azulejo {
     
     //Para cuando el azulejo está con una pieza encima
     public static final class AzulejoOcupado extends Azulejo {
-        Pieza piezaEnAzulejo;        
+        private final Pieza piezaEnAzulejo;        
         //Crea el azulejo con una pieza encima
-        AzulejoOcupado(int posAzulejo, Pieza piezaEnAzulejo){
+        AzulejoOcupado(final int posAzulejo, Pieza piezaEnAzulejo){
             super(posAzulejo);
             this.piezaEnAzulejo = piezaEnAzulejo;
         }        
