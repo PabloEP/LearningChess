@@ -1,10 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Tablero;
 
 public enum Alianza {
+    BLANCA {
+        @Override
+        public int obtenerDireccion() {
+            return -1;
+        }
+    },
+    NEGRA {
+        @Override
+        public int obtenerDireccion(){
+            return 1;
+        }
+    };
+    
+    public abstract int obtenerDireccion();
     
 }
