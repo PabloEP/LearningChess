@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Elementos;
+package Frames;
 
 /**
  *
  * @author Pablo
  */
-public class Tablero extends javax.swing.JFrame {
-    Azulejo[] cuadrados = new Azulejo[64];
-    
-    public Tablero() {
+public class LearningCenter extends javax.swing.JFrame {
+
+    /**
+     * Creates new form LearningCenter
+     */
+    public LearningCenter() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        iniciarMasComponentes();
     }
 
     /**
@@ -28,7 +28,8 @@ public class Tablero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Learning Center");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -44,11 +45,8 @@ public class Tablero extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void iniciarMasComponentes() {
-    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
-
-
 }

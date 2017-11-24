@@ -1,6 +1,6 @@
-package learningchess;
+package Frames;
 
-import Elementos.Tablero;
+import Tablero.Tablero;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -29,11 +29,17 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Learning Chess");
+        setBounds(new java.awt.Rectangle(300, 800, 579, 413));
+        setMaximumSize(new java.awt.Dimension(579, 413));
         setMinimumSize(new java.awt.Dimension(579, 413));
+        setPreferredSize(new java.awt.Dimension(579, 413));
         setResizable(false);
+        setSize(new java.awt.Dimension(579, 413));
         getContentPane().setLayout(null);
 
         jbtnPlay.setText("Play 1v1");
+        jbtnPlay.setFocusable(false);
         jbtnPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnPlayActionPerformed(evt);
@@ -43,6 +49,7 @@ public class MainMenu extends javax.swing.JFrame {
         jbtnPlay.setBounds(120, 330, 110, 23);
 
         jbtnLearning.setText("Learning Center");
+        jbtnLearning.setFocusable(false);
         jbtnLearning.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnLearningActionPerformed(evt);
@@ -51,7 +58,7 @@ public class MainMenu extends javax.swing.JFrame {
         getContentPane().add(jbtnLearning);
         jbtnLearning.setBounds(310, 330, 130, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/mainMenu.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mainMenu.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 580, 410);
 
@@ -60,8 +67,8 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jbtnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPlayActionPerformed
         // TODO add your handling code here:
-        Tablero tablero = new Tablero();
-        tablero.setVisible(true);
+        //Tablero tablero = new Tablero();
+        //tablero.setVisible(true);
         
     }//GEN-LAST:event_jbtnPlayActionPerformed
 

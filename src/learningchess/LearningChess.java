@@ -1,5 +1,7 @@
 package learningchess;
 
+import Frames.MainMenu;
+
 /**
  *
  * @author Pablo
