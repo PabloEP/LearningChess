@@ -44,7 +44,11 @@ public abstract class Azulejo {
         //Crea el azulejo sin pieza
         AzulejoVacio(final int posicion){
             super(posicion);
-        }        
+        }
+        @Override
+        public String toString(){
+            return "-";
+        }
         //Retorna que la posicion no está ocupada
         @Override
         public boolean elAzulejoEstaOcupado() {
@@ -64,7 +68,13 @@ public abstract class Azulejo {
         AzulejoOcupado(final int posAzulejo,final Pieza piezaEnAzulejo){
             super(posAzulejo);
             this.piezaEnAzulejo = piezaEnAzulejo;
-        }        
+        }  
+        
+        @Override
+        public String toString(){
+            return obtenerPieza().obtenerAlianzaPieza().esBlanca() ? obtenerPieza().toString().toLowerCase() :
+                   obtenerPieza().toString();
+        }
         //Retorna que la posicion está ocupada
         @Override
         public boolean elAzulejoEstaOcupado() {

@@ -50,6 +50,11 @@ public class Arfil extends Pieza{
         return ImmutableList.copyOf(movimientosLegales);
     }
     
+    @Override
+    public String toString(){
+        return TipoPieza.ARFIL.toString();
+    }
+    
     private static boolean esPrimeraColumnaExcluida(final int posicionActual, final int candidatoActual){
         return Utiles.PRIMERA_COLUMNA[posicionActual] && (candidatoActual == -9 || candidatoActual == 7);
     }

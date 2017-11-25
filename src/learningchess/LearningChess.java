@@ -1,6 +1,7 @@
 package learningchess;
 
 import Frames.MainMenu;
+import Tablero.Tablero;
 
 /**
  *
@@ -14,6 +15,8 @@ public class LearningChess {
     public static void main(String[] args) {
         // TODO code application logic here
         new MainMenu();
+        //Tablero tablero = Tablero.crearTableroEstandar();
+        //System.out.println(tablero);
     }
     
 }

@@ -66,9 +66,8 @@ public class MainMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPlayActionPerformed
-        // TODO add your handling code here:
-        //Tablero tablero = new Tablero();
-        //tablero.setVisible(true);
+        Tablero tablero = Tablero.crearTableroEstandar();
+        System.out.println(tablero);
         
     }//GEN-LAST:event_jbtnPlayActionPerformed
 

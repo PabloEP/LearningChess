@@ -18,7 +18,7 @@ public class Caballero extends Pieza{
     public Caballero(int posPieza, Alianza aliPieza) {
         super(posPieza, aliPieza);
     }
-
+    
     @Override
     public List<Movimiento> calcularMovimientosLegales(final Tablero tablero) {
         
@@ -47,6 +47,11 @@ public class Caballero extends Pieza{
         }
         
         return ImmutableList.copyOf(movimientosLegales);
+    }
+    
+    @Override
+    public String toString(){
+        return TipoPieza.CABALLERO.toString();
     }
 
     private static boolean esPrimeraColumnaExcluida(final int posicionActual, final int posicionCandidata){        
